@@ -32,28 +32,25 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      {loading ? (
-        <Preloader />
-      ) : (
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="products" element={<Products />} />
-            <Route path="retail-management" element={<RetailManagement />} />
-            <Route path="trade-enquiry" element={<TradeEnquiry />} />
-            <Route path="e-quotation" element={<EQuotation />} />
-            <Route path="e-auction" element={<EAuction />} />
-            <Route path="trade-circular" element={<TradeCircular />} />
-            <Route path="blog" element={<Blog />} />
-            <Route path="notice-board" element={<NoticeBoard />} />
-            <Route path="career" element={<Career />} />
-            <Route path="reviews" element={<CustomerReview />} />
-            <Route path="gallery" element={<BusinessMediaGallery />} />
-          </Route>
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="products" element={<Products />} />
+          <Route path="retail-management" element={<RetailManagement />} />
+          <Route path="trade-enquiry" element={<TradeEnquiry />} />
+          <Route path="e-quotation" element={<EQuotation />} />
+          <Route path="e-auction" element={<EAuction />} />
+          <Route path="trade-circular" element={<TradeCircular />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="notice-board" element={<NoticeBoard />} />
+          <Route path="career" element={<Career />} />
+          <Route path="reviews" element={<CustomerReview />} />
+          <Route path="gallery" element={<BusinessMediaGallery />} />
+        </Route>
+      </Routes>
+      {loading && <Preloader />}
     </Router>
   );
 }
